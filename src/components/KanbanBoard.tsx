@@ -44,7 +44,7 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({
           <div key={column.id} className="bg-gray-50 p-4 rounded-lg shadow">
             <h2 className="text-lg font-semibold mb-4">{column.name}</h2>
             <Droppable droppableId={column.id}>
-              {(provided, snapshot) => (
+              {(provided) => (
                 <div ref={provided.innerRef} {...provided.droppableProps}>
                   {columnCards.map((card, index) => (
                     <Draggable
